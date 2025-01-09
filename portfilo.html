@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;800;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: #2a2a2a;
+            --second-bg-color: #202020;
+            --text-color: #fff;
+            --second-color: #ccc;
+            --main-color: #05b4ff;
+            --big-font: 5rem;
+            --h2-font: 3rem;
+            --p-font: 1.1rem;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            padding: 22px 15%;
+            border-bottom: 1px solid transparent;
+            transition: all .45s ease;
+        }
+
+        .logo {
+            font-size: 35px;
+            color: var(--main-color);
+        }
+
+        .navlist {
+            display: flex;
+        }
+
+        .navlist a {
+            color: var(--second-color);
+            font-size: 17px;
+            font-weight: 500;
+            margin: 0 25px;
+            transition: all .45s ease;
+        }
+
+        .navlist a:hover {
+            color: var(--main-color);
+        }
+
+        #menu-icon {
+            font-size: 35px;
+            color: var(--text-color);
+            z-index: 1000;
+            cursor: pointer;
+            margin-left: 25px;
+            display: none;
+        }
+
+        section {
+            padding: 160px 15% 120px;
+        }
+
+
+            .home{
+                position: relative;
+            height: 100vh;
+            width: 100%;
+            background-image: url("");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+}
+
+        
+
+        .slide {
+            margin-bottom: 20px;
+        }
+
+        .one {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 0 15px;
+            line-height: 32px;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 5px;
+            background: var(--main-color);
+            color: var(--text-color);
+        }
+
+        .two {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--second-color);
+        }
+
+        .home-text h1 {
+            font-size: var(--big-font);
+            font-weight: 700;
+            color: var(--text-color);
+            line-height: 1.1;
+            margin: 0 0 8px;
+        }
+
+        .home-text p {
+            color: var(--second-color);
+            font-size: var(--p-font);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px;
+            background: var(--main-color);
+            border-radius: 5px;
+            color: var(--text-color);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            transform: all .45s ease;
+        }
+
+        .button:hover {
+            transform: scale(0.9);
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-self: center;
+            gap: 1.5rem;
+        }
+
+       
+        .small-image {
+    width: 600px; 
+    height: auto; 
+}
+
+.portfolio-item img {
+    max-width: 100%; 
+    height: auto;   
+}
+
+        .about-text h2 {
+            font-size: var(--h2-font);
+            line-height: 1;
+        }
+
+        .about-text p {
+            color: var(--second-color);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: var(--p-font);
+            line-height: 1.8;
+            margin-bottom: 4rem;
+        }
+
+        .skills {
+            background-color: var(--big-color);
+            padding: 80px 15%;
+        }
+
+        .skills h2 {
+            font-size: var(--h2-font);
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
+        .skills .skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .skills .skill span {
+            width: 150px;
+            font-weight: 500;
+        }
+
+        .skills .skill-bar {
+            width: 100%;
+            height: 20px;
+            background: var(--second-color);
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skills .skill-bar::after {
+            content: '';
+            height: 100%;
+            background: var(--main-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .html-bar { width: 90%; }
+        .css-bar { width: 85%; }
+        .js-bar { width: 70%; }
+        .python-bar { width: 65%; }
+        .c-bar { width: 60%; }
+        .projects {
+    padding: 80px 15%;
+    background-color: var(--big-color);
+}
+
+.projects h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 40px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.project img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project p {
+    color: var(--second-color);
+    font-size: var(--p-font);
+}
+.contact h2{
+    font-size: var(--h2-font);
+    margin-bottom: 40px;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.contact-info {
+    width: 45%;
+    
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+
+   
+}
+
+.contact-info p, .contact-info a {
+    color:white;
+}
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+}
+
+.resume-button button {
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resume-button button:hover {
+    background-color: #005582;
+}
+
+.contact-form {
+    width: 50%;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    background-color: #0073b1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #005582;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">Logo</h1>
+        <ul class="navlist">
+            <li><a href="#Home" class="active">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Project">Project</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+    <section class="home-text">
+        <div class="slide">
+            <span class="one">Hello</span>
+            <span class="two">I'm</span>
+        </div>
+        <h1>Anusha</h1>
+        <p></p>
+        <div class="button">
+            <a href="#About" class="btn">About Me</a>
+        </div>
+    </section>
+    <section class="about" id="About">
+        <div class="portfolio-item">
+            <img src="images/girl.jpg" alt="Description of the image" class="small-image">
+        </div>
+            
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2><br>
+            <p>
+
+Hello! I'm Anusha, a passionate and dedicated fresher with a Bachelor of Computer Applications (BCA) degree. My journey in the world of technology has been driven by a deep curiosity and a desire to solve real-world problems through innovative solutions.
+
+During my academic journey, I've gained a solid foundation in programming languages such as HTML, CSS, JavaScript, Python, and C. I've also developed strong skills in database management, data analysis, and software development. My academic projects and internships have provided me with hands-on experience and the ability to apply theoretical knowledge in practical scenarios.
+
+I am particularly excited about the potential of technology to transform industries and improve lives. I am eager to leverage my skills and knowledge to contribute to a dynamic and growth-oriented organization. I am committed to continuous learning and growth in the IT field, and I look forward to collaborating with like-minded professionals to create impactful solutions.
+
+            </p>
+            <a href="#" class="btn">More About</a>
+        </div>
+    </section>
+    <section class="skills" id="Skills">
+        <h2>My <span>Skills</span></h2>
+        <div class="skill">
+            <span>HTML</span>
+            <div class="skill-bar html-bar"></div>
+        </div>
+        <div class="skill">
+            <span>CSS</span>
+            <div class="skill-bar css-bar"></div>
+        </div>
+        <div class="skill">
+            <span>JavaScript</span>
+            <div class="skill-bar js-bar"></div>
+        </div>
+        <div class="skill">
+            <span>Python</span>
+            <div class="skill-bar python-bar"></div>
+        </div>
+        <div class="skill">
+            <span>C</span>
+            <div class="skill-bar c-bar"></div>
+        </div>
+    </section>
+    <section class="projects" id="Project">
+        <h2>My <span>Projects</span></h2>
+        <div class="project">
+            <img src="images/project1.png" alt="">
+            <img src="project6.jpg" alt="">
+            <p>Project Description: A sample project showcasing HTML and CSS skills.</p>
+        </div>
+    </section> 
+    <section class="contact" id="Contact">
+        <h2>Contact <span>Me</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                
+                <p><strong>Email:</strong> <a href="mailto:your-email@example.com">anushasiddraju68@gmail.com</a></p>
+                <p><strong>Phone:</strong> +91 9100000010</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/your-linkedin-id" target="_blank">
+                        
+                    </a> 
+                </div>
+                <div class="resume-button">
+                    <a href="your-resume-file.pdf" download>
+                        <button>Download Resume</button>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+    
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+</body>
+</html>
